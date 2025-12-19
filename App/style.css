@@ -1,0 +1,133 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+body {
+  background-color: rgb(226, 225, 225);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+#board {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 48px);
+  background-image: radial-gradient(#666565 2px, transparent 0);
+  background-size: 24px 24px;
+  overflow: hidden;
+}
+main {
+  flex: 1;
+}
+footer {
+  display: flex;
+  margin: 0;
+  background: #222;
+  box-shadow: 0px -5px 2px rgba(34, 34, 34, 0.8);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  justify-content: center;
+  gap: 10px;
+}
+.gradient-text {
+  margin: 10px 0px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, red, blue);
+  background-size: 300%;
+  animation: gradientMove 10s infinite linear;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+header {
+  background-color: rgba(34, 34, 34, 0.1);
+}
+
+.cool-btn {
+  position: relative;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cool-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 117, 252, 0.4);
+}
+
+.cool-btn:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 5px 12px rgba(37, 117, 252, 0.3);
+}
+
+.cool-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+
+  transition: left 0.5s ease;
+}
+
+.cool-btn:hover::before {
+  left: 100%;
+}
+
+.cool-btn:active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  animation: ripple 0.4s ease;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
