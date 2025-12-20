@@ -160,38 +160,73 @@ header {
   z-index: 9999;
 }
 
-.board-child {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: red;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .board-child-sh {
   position: absolute;
   width: 45px;
   height: 45px;
-  background-color: red;
+  background: radial-gradient(
+    circle,
+    rgba(207, 110, 0, 1) 0%,
+    rgba(203, 17, 17, 1) 100%
+  );
   border-radius: 50%;
   transform: translate(-50%, -50%);
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .board-child-md {
   position: absolute;
   width: 60px;
   height: 60px;
-  background-color: red;
+  background: radial-gradient(
+    circle,
+    rgba(207, 110, 0, 1) 0%,
+    rgba(203, 17, 17, 1) 100%
+  );
   border-radius: 50%;
   transform: translate(-50%, -50%);
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .board-child-lo {
   position: absolute;
   width: 75px;
   height: 75px;
-  background-color: red;
+  background: radial-gradient(
+    circle,
+    rgba(207, 110, 0, 1) 0%,
+    rgba(203, 17, 17, 1) 100%
+  );
   border-radius: 50%;
   transform: translate(-50%, -50%);
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.temp-textbox {
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: white;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 3px solid #333;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
